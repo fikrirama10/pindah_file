@@ -396,6 +396,9 @@ def pindah():
         case '12':
             print("Pindah File PKS MUX")
             pindah_file_pks_mux()
+        case '13':
+            print("Pindah File NIB")
+            pindah_file_nib()
         case _:
             print('Invalid input')
 
