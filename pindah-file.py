@@ -427,7 +427,7 @@ def pindah():
             pindah_file_nib()
         case '14':
             print("Pindah File Konfigurasi Jaringan")
-            pindah_file_nib()
+            pindah_file_rencana_konfigurasi()
         case _:
             print('Invalid input')
 
