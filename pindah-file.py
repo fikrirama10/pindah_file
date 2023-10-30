@@ -414,7 +414,7 @@ def pindah_file_rencana_konfigurasi():
         except Exception as e:
             print(f"Kesalahan lain: {e}")
 
-def pindah_file_rencana_konfigurasi():
+def pindah_file_permohonan_ulop():
     connection = destinantion_connection()
     cursor = connection.cursor()
     cursor.execute(" SELECT file_permohonan_ulop from pengajuan_ulop_radio WHERE file_permohonan_ulop IS NOT NULL ")
@@ -458,7 +458,7 @@ def pindah():
     print("12. Pindah File PKS MUX")
     print("13. Pindah File Lampiran NIB")
     print("14. Pindah File Konfigurasi Jaringan")
-    print("14. Pindah File FC ISR")
+    print("15. Pindah File FC ISR")
 
 
     num = input('Masukan Nomor: ')
@@ -505,9 +505,12 @@ def pindah():
         case '14':
             print("Pindah File Konfigurasi Jaringan")
             pindah_file_rencana_konfigurasi()
-        case '14':
+        case '15':
             print("Pindah File FC ISR")
             pindah_file_isr()
+        case '16':
+            print("Pindah Permohonan Ulop")
+            pindah_file_permohonan_ulop()
         case _:
             print('Invalid input')
 
