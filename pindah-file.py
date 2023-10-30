@@ -242,6 +242,30 @@ def pindah_file_scan_isr():
         except Exception as e:
             print(f"Kesalahan lain: {e}")
 
+def pindah_file_isr():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_dokumen_isr from pengajuan_ulop_radio ")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/eucs/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_isr/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
+
 def pindah_file_data_keuangan():
     connection = destinantion_connection()
     cursor = connection.cursor()
@@ -390,6 +414,31 @@ def pindah_file_rencana_konfigurasi():
         except Exception as e:
             print(f"Kesalahan lain: {e}")
 
+def pindah_file_rencana_konfigurasi():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_permohonan_ulop from pengajuan_ulop_radio WHERE file_permohonan_ulop IS NOT NULL ")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # print(nama_file)
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/eucs/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_permohonan_ulop/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
+
 
 
 def pindah():
@@ -409,6 +458,7 @@ def pindah():
     print("12. Pindah File PKS MUX")
     print("13. Pindah File Lampiran NIB")
     print("14. Pindah File Konfigurasi Jaringan")
+    print("14. Pindah File FC ISR")
 
 
     num = input('Masukan Nomor: ')
@@ -455,6 +505,9 @@ def pindah():
         case '14':
             print("Pindah File Konfigurasi Jaringan")
             pindah_file_rencana_konfigurasi()
+        case '14':
+            print("Pindah File FC ISR")
+            pindah_file_isr()
         case _:
             print('Invalid input')
 
