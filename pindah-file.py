@@ -611,6 +611,31 @@ def pindah_file_fotokopi_npwp():
         except Exception as e:
             print(f"Kesalahan lain: {e}")
 
+def pindah_file_keputusan_mentri():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_keputusan_mentri from pengajuan_ulop_tv WHERE file_keputusan_mentri IS NOT NULL ")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # print(nama_file)
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_keputusan_mentri/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
+
 
 def pindah():
     # using input() to take user input
@@ -703,6 +728,9 @@ def pindah():
         case '23':
             print("Pindah Foto Rekomendasi")
             pindah_file_fotokopi_npwp()
+        case '24':
+            print("Pindah Foto Rekomendasi")
+            pindah_file_keputusan_mentri()
         case _:
             print('Invalid input')
 
