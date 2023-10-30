@@ -343,7 +343,7 @@ def pindah_file_nib():
 def pindah_file_rencana_konfigurasi():
     connection = destinantion_connection()
     cursor = connection.cursor()
-    cursor.execute(" SELECT file_rencana_konfigurasi from lampiran_penyiaran WHERE file_rencana_konfigurasi IS NOT NULL ")
+    cursor.execute(" SELECT file_rencana_konfirgurasi from lampiran_penyiaran WHERE file_rencana_konfirgurasi IS NOT NULL ")
     records = cursor.fetchall()
     for row in records:
         nama_file = row[0]
