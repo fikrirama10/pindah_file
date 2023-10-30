@@ -499,7 +499,7 @@ def pindah_file_foto_rekomendasi():
         # print(nama_file)
         # Tentukan path sumber dan path destinasi
         path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
-        path_destinasi = "/home/simp3-rebuild/public/storage/foto-rekomendasi/"
+        path_destinasi = "/home/simp3-rebuild/public/storage/foto_rekomendasi/"
         try:
             with open(path_sumber, "r") as file:
                 # Lakukan operasi pada file
