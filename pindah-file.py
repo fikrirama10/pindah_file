@@ -538,6 +538,54 @@ def pindah_file_foto_rekomendasi():
             print("Kesalahan: Izin akses tidak mencukupi.")
         except Exception as e:
             print(f"Kesalahan lain: {e}")
+def pindah_file_misi():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_misi from lampiran_penyiaran WHERE file_misi IS NOT NULL ")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # print(nama_file)
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_misi/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
+def pindah_file_visi():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_visi from lampiran_penyiaran WHERE file_visi IS NOT NULL ")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # print(nama_file)
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_visi/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
 
 def pindah():
     # using input() to take user input
@@ -621,6 +669,12 @@ def pindah():
         case '20':
             print("Pindah Foto Rekomendasi")
             pindah_file_pengesahan_akta_perubahan()
+        case '21':
+            print("Pindah Foto Rekomendasi")
+            pindah_file_visi()
+        case '22':
+            print("Pindah Foto Rekomendasi")
+            pindah_file_misi()
         case _:
             print('Invalid input')
 
