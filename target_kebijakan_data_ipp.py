@@ -178,15 +178,15 @@ def start_():
     for row in results:
         id = row[0]
         # print(id)
-        # status = cek_status_evaluasi(id)
+        evaluasi= cek_status_evaluasi(id)
         status = get_id_jenis_penyiaran(id)
         print(str(status)+'-'+str(id))
 
-        # if id == None:
-        #     nama = row[1]
-        #     data = cek_nama_perusahaan(nama)
-        # else:
-        #     data = cek_ipp_tetap(id)
-        #     print(str(data)+'-'+str(id))
+        if id == None:
+            nama = row[1]
+            data = cek_nama_perusahaan(nama)
+        else:
+            data = cek_ipp_tetap(id)
+            print(str(data)+'-'+str(id))
 
 start_()
