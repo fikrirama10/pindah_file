@@ -3,11 +3,11 @@ import mysql.connector
 
 config = {
     'user': 'root',
-    'password': '#e-Penyiaran@2022!',
-    'host': '192.168.1.23',
-    'database': 'simp3_v2',
-    'raise_on_warnings': True,
-    'port': 3360
+    'password': '',
+    'host': 'localhost',
+    'database': 'simp3_user_v2',
+    # 'raise_on_warnings': True,
+    'port': 3306
 }
 
 config_golive = {
@@ -152,7 +152,7 @@ def get_id_jenis_penyiaran(id):
         sql = "UPDATE jenis_penyiaran SET evaluasi_ulang = '1' WHERE id = '"+str(results[0])+"'"
         cursor2.execute(sql)
         db2.commit()
-        
+
     return results
 
 def start_():
