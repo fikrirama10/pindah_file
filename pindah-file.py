@@ -250,7 +250,7 @@ def pindah_file_isr():
     for row in records:
         nama_file = row[0]
         # Tentukan path sumber dan path destinasi
-        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/eucs/"+str(nama_file)
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
         path_destinasi = "/home/simp3-rebuild/public/storage/file_dokumen_isr/"
         try:
             with open(path_sumber, "r") as file:
