@@ -688,7 +688,7 @@ def pindah_file_keputusan_mentri():
 def pindah_file_dokumen_ulop():
     connection = destinantion_connection()
     cursor = connection.cursor()
-    cursor.execute(" SELECT file_dokumen_ulop from pengajuan_ulop_tv WHERE file_dokumen_ulop IS NOT NULL ")
+    cursor.execute(" SELECT file_dokumen_ulop from pengajuan_ulop_radio WHERE file_dokumen_ulop IS NOT NULL ")
     records = cursor.fetchall()
     for row in records:
         nama_file = row[0]
