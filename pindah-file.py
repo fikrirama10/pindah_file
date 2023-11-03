@@ -251,7 +251,31 @@ def pindah_file_isr():
         nama_file = row[0]
         # Tentukan path sumber dan path destinasi
         path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/eucs/"+str(nama_file)
-        path_destinasi = "/home/simp3-rebuild/public/storage/file_isr/"
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_dokumen_isr/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
+
+def pindah_file_isr_tv():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_dokumen_isr from pengajuan_ulop_tv WHERE file_dokumen_isr IS NOT NULL")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/eucs/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_isr_ulotv/"
         try:
             with open(path_sumber, "r") as file:
                 # Lakukan operasi pada file
@@ -779,6 +803,7 @@ def pindah():
         case '15':
             print("Pindah File FC ISR")
             pindah_file_isr()
+            pindah_file_isr_tv()
         case '16':
             print("Pindah Permohonan Ulop")
             pindah_file_permohonan_ulop()
