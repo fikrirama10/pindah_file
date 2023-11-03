@@ -148,6 +148,11 @@ def get_id_jenis_penyiaran(id):
         sql = "UPDATE target_evaluasi SET id_jenis_penyiaran = '"+str(results[0])+"' WHERE IDPERUSAHAAN = '"+str(id)+"'"
         cursor2.execute(sql)
         db2.commit()
+        #update evaluasi_ulang di table jenis_penyiaran berdasarkan id
+        sql = "UPDATE jenis_penyiaran SET evaluasi_ulang = '1' WHERE id = '"+str(results[0])+"'"
+        cursor2.execute(sql)
+        db2.commit()
+        
     return results
 
 def start_():
