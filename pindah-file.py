@@ -269,7 +269,7 @@ def pindah_file_isr():
 def pindah_file_isr_tv():
     connection = destinantion_connection()
     cursor = connection.cursor()
-    cursor.execute(" SELECT file_dokumen_isr from pengajuan_ulop_tv WHERE file_dokumen_isr IS NOT NULL")
+    cursor.execute(" SELECT file_isr from pengajuan_ulop_tv WHERE file_isr IS NOT NULL")
     records = cursor.fetchall()
     for row in records:
         nama_file = row[0]
