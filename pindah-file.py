@@ -811,7 +811,7 @@ def pindah():
             pindah_file_dokumen_ulop()
         case '26':
             print("Pindah Foto Rekomendasi")
-            pindah_file_dokumen_mux()
+            pindah_file_file_afiliasi()
         case '27':
             print("Pindah Foto Rekomendasi")
             pindah_file_dokumen_mux()
