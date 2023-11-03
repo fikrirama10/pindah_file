@@ -342,7 +342,7 @@ def pindah_file_pks_mux():
 def pindah_file_dokumen_mux():
     connection = destinantion_connection()
     cursor = connection.cursor()
-    cursor.execute(" SELECT file_dokumen_mux from pengajuan_ulop_tv WHERE file_dokumen_mux IS NOT NULL ")
+    cursor.execute(" SELECT file_kerjasama_mux from pengajuan_ulop_tv WHERE file_kerjasama_mux IS NOT NULL ")
     records = cursor.fetchall()
     for row in records:
         nama_file = row[0]
