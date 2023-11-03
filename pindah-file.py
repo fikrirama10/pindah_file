@@ -499,7 +499,7 @@ def pindah_file_pengesahan_akta_pendirian():
         # print(nama_file)
         # Tentukan path sumber dan path destinasi
         path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
-        path_destinasi = "/home/simp3-rebuild/public/storage/file_akta_pengesahan_pendirian/"
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_akta_pengesahan/"
         try:
             with open(path_sumber, "r") as file:
                 # Lakukan operasi pada file
