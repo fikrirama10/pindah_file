@@ -802,7 +802,7 @@ def pindah():
             pindah_file_rencana_konfigurasi()
         case '15':
             print("Pindah File FC ISR")
-            pindah_file_isr()
+            # pindah_file_isr()
             pindah_file_isr_tv()
         case '16':
             print("Pindah Permohonan Ulop")
