@@ -339,6 +339,31 @@ def pindah_file_pks_mux():
         except Exception as e:
             print(f"Kesalahan lain: {e}")
 
+def pindah_file_dokumen_mux():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_dokumen_mux from pengajuan_ulop_tv WHERE file_dokumen_mux IS NOT NULL ")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # print(nama_file)
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_dokumen_mux/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
+
 def pindah_file_nib():
     connection = destinantion_connection()
     cursor = connection.cursor()
@@ -661,6 +686,31 @@ def pindah_file_dokumen_ulop():
         except Exception as e:
             print(f"Kesalahan lain: {e}")
 
+def pindah_file_file_afiliasi():
+    connection = destinantion_connection()
+    cursor = connection.cursor()
+    cursor.execute(" SELECT file_afiliasi from lembaga_penyiaran WHERE file_afiliasi IS NOT NULL ")
+    records = cursor.fetchall()
+    for row in records:
+        nama_file = row[0]
+        # print(nama_file)
+        # Tentukan path sumber dan path destinasi
+        path_sumber = "/var/www/html/app-simp3-pra-migrasi/uploads/lampiran_file_temp/"+str(nama_file)
+        path_destinasi = "/home/simp3-rebuild/public/storage/file_afiliasi/"
+        try:
+            with open(path_sumber, "r") as file:
+                # Lakukan operasi pada file
+                shutil.copy(path_sumber, path_destinasi)
+                print("berhasil")
+        except IsADirectoryError as e:
+            print(f"Kesalahan: Ini adalah direktori, bukan file. {e} "+str(nama_file))
+        except FileNotFoundError:
+            print("Kesalahan: File tidak ditemukan.")
+        except PermissionError:
+            print("Kesalahan: Izin akses tidak mencukupi.")
+        except Exception as e:
+            print(f"Kesalahan lain: {e}")
+
 
 def pindah():
     # using input() to take user input
@@ -759,6 +809,12 @@ def pindah():
         case '25':
             print("Pindah Foto Rekomendasi")
             pindah_file_dokumen_ulop()
+        case '26':
+            print("Pindah Foto Rekomendasi")
+            pindah_file_dokumen_mux()
+        case '27':
+            print("Pindah Foto Rekomendasi")
+            pindah_file_dokumen_mux()
         case _:
             print('Invalid input')
 
