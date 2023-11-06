@@ -91,124 +91,124 @@ def start_():
                 connection2.commit()
                 print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'SCAN_DOKUMEN_ISR':
-                # update field file_scan_isr di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_scan_isr = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'SCAN_DOKUMEN_ISR':
+            #     # update field file_scan_isr di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_scan_isr = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'STRUKTUR_ORGANISASI':
-                # update field file_aspek_managemen di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_aspek_managemen = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'STRUKTUR_ORGANISASI':
+            #     # update field file_aspek_managemen di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_aspek_managemen = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'SALINAN_AKTA_PENDIRIAN':
-                # update field file_akta_pendirian di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_akta_pendirian = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'SALINAN_AKTA_PENDIRIAN':
+            #     # update field file_akta_pendirian di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_akta_pendirian = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'SALINAN_AKTA_PERUBAHAN':
-                # update field file_akta_perubahan di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_akta_perubahan = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'SALINAN_AKTA_PERUBAHAN':
+            #     # update field file_akta_perubahan di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_akta_perubahan = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'PKS_MUX':
-                # update field file_pks_mux di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_pks_mux = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'PKS_MUX':
+            #     # update field file_pks_mux di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_pks_mux = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'SUSUNAN_PENGURUS':
-                # update field file_akta_pengurus di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_akta_pengurus = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'SUSUNAN_PENGURUS':
+            #     # update field file_akta_pengurus di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_akta_pengurus = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'PERNYATAAN_KEBENARAN_DATA':
-                # update field file_surat_pernyataan di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_surat_pernyataan = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'PERNYATAAN_KEBENARAN_DATA':
+            #     # update field file_surat_pernyataan di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_surat_pernyataan = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
             
-            elif field_name == 'DUKUNGAN':
-                # update field dukungan_tertulis di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET dukungan_tertulis = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.",file_name, idperusahaanfinal_origin)
+            # elif field_name == 'DUKUNGAN':
+            #     # update field dukungan_tertulis di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET dukungan_tertulis = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.",file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'FOTOKOPI_BERKAS_REKOMENDASI':
-                # update field foto_rekomendasi di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET foto_rekomendasi = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'FOTOKOPI_BERKAS_REKOMENDASI':
+            #     # update field foto_rekomendasi di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET foto_rekomendasi = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin,))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'SALINAN_PENGESAHAN_AKTA':
-                # update field file_akta_pengesahan_pendirian di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_akta_pengesahan_pendirian = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'SALINAN_PENGESAHAN_AKTA':
+            #     # update field file_akta_pengesahan_pendirian di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_akta_pengesahan_pendirian = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'SALINAN_PENGESAHAN_AKTA_PERUBAHAN':
-                # update field file_akta_pengesahan_perubahan di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_akta_pengesahan_perubahan = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'SALINAN_PENGESAHAN_AKTA_PERUBAHAN':
+            #     # update field file_akta_pengesahan_perubahan di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_akta_pengesahan_perubahan = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'FOTOKOPI_NPWP':
-                # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_fotokopi_npwp = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'FOTOKOPI_NPWP':
+            #     # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_fotokopi_npwp = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
 
-            elif field_name == 'DUKUNGAN':
-                # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET dukungan_tertulis = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'DUKUNGAN':
+            #     # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET dukungan_tertulis = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
             
-            elif field_name == 'FOTOKOPI_BERKAS_REKOMENDASI':
-                # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET foto_rekomendasi = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'FOTOKOPI_BERKAS_REKOMENDASI':
+            #     # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET foto_rekomendasi = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
 
-            elif field_name == 'SPESIFIKASI_TEKNIK':
-                # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_rencana_konfirgurasi = %s WHERE idperusahaanfinal_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'SPESIFIKASI_TEKNIK':
+            #     # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lampiran_penyiaran SET file_rencana_konfirgurasi = %s WHERE idperusahaanfinal_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
 
-            elif field_name == 'LAMPIRAN_NIB':
-                # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lembaga_penyiaran SET file_nib = %s WHERE penyiaran_id_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'LAMPIRAN_NIB':
+            #     # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lembaga_penyiaran SET file_nib = %s WHERE penyiaran_id_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
                 
-            elif field_name == 'Afiliasi':
-                # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lembaga_penyiaran SET file_afiliasi = %s WHERE penyiaran_id_origin = %s"
-                cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
-                connection2.commit()
-                print("record updated.", file_name, idperusahaanfinal_origin)
+            # elif field_name == 'Afiliasi':
+            #     # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
+            #     sql2 = "UPDATE lembaga_penyiaran SET file_afiliasi = %s WHERE penyiaran_id_origin = %s"
+            #     cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
+            #     connection2.commit()
+            #     print("record updated.", file_name, idperusahaanfinal_origin)
 
             elif field_name == 'PROYEKSI_PENDAPATAN':
                 # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
