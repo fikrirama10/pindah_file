@@ -212,14 +212,14 @@ def start_():
 
             elif field_name == 'PROYEKSI_PENDAPATAN':
                 # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_aspek_permodalan = %s WHERE penyiaran_id_origin = %s"
+                sql2 = "UPDATE lampiran_penyiaran SET file_aspek_permodalan = %s WHERE idperusahaanfinal_origin = %s"
                 cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
                 connection2.commit()
                 print("record updated.", file_name, idperusahaanfinal_origin)
 
             elif field_name == 'RENCANA_KINERJA_KEUANGAN':
                 # update field file_fotokopi_npwp di tabel lampiran_penyiaran berdasarkan id_perusahaanfinal_origin
-                sql2 = "UPDATE lampiran_penyiaran SET file_case_flow = %s WHERE penyiaran_id_origin = %s"
+                sql2 = "UPDATE lampiran_penyiaran SET file_case_flow = %s WHERE idperusahaanfinal_origin = %s"
                 cursor2.execute(sql2, (file_name, idperusahaanfinal_origin, ))
                 connection2.commit()
                 print("record updated.", file_name, idperusahaanfinal_origin)
