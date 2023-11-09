@@ -4,12 +4,20 @@ from datetime import datetime
 
 config = {
     'user': 'root',
-    'password': '',
-    'host': 'localhost',
-    'database': 'simp3_user_v2',
+    'password': '#e-Penyiaran@2022!',
+    'host': '192.168.1.23',
+    'database': 'simp3_v2',
     # 'raise_on_warnings': True,
-    'port': 3306
+    'port': 3360
 }
+# config = {
+#     'user': 'root',
+#     'password': '',
+#     'host': 'localhost',
+#     'database': 'simp3_user_v2',
+#     # 'raise_on_warnings': True,
+#     'port': 3306
+# }
 
 config_golive = {
     'user': 'root',
